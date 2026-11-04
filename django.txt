@@ -1,0 +1,60 @@
+# Django: Python framework, web development(full stack[frontend, backend])
+
+# MVT Architecture:
+Models: database, table, fields, datatype
+Views: logics, models and templates 
+Templates: frontend, user interface, html, css
+
+
+# install virtual environment
+pip install virtualenv
+
+# create virtual environment
+python virtualenv env
+python -m venv env            [env/venv is the name of virtual environment]
+
+# activate virtual environment
+env\Scripts\activate             [win: command prompt]
+
+source env/Scripts/activate      [gitbash]
+source env/bin/activate      [mac/linux]
+
+# install Django
+pip install Django
+python -m pip install Django
+
+# create django project
+django-admin startproject project_name .      ['.' is optional]
+
+# create app
+python manage.py startapp app_name
+
+
+
+# run server
+python manage.py runserver
+break: ctrl + c
+
+
+
+# ORM: Object Relational Mapping
+# CRUD opeation:
+# GET: 
+   model_name/table_name.objects.all()   # get all data
+
+# CREATE: 
+   model_name/table_name.objects.create(field1 = "...", field2 = "...", ....) 
+
+# RETRIEVE: 
+   a = model_name/table_name.objects.get(id = 6)   # get single data
+
+# Update: assign new data
+   a.field1 = "..."        # assigning new data
+   a.save()                # manually call save method
+
+# Delete:
+   RETRIEVE single data
+   a.delete()         call
+
+# Filtering
+   model_name.objects.filter(field1 = "data to be searched", field2="...", field3="...")

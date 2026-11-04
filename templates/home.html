@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}HOMEPAGE{% endblock title %}
+{% block body %}
+   <h1>{{heading}}</h1>
+   <p>{{content}}</p>
+   <div class="container">
+
+   <table class="table">
+   <thead>
+      <tr>
+         <th scope="col">#</th>
+         <th scope="col">First</th>
+         <th scope="col">Last</th>
+         <th scope="col">address</th>
+      </tr>
+   </thead>
+   <tbody>
+      {% for person in abc %} 
+      {% comment %} person = {"name":"John","age":30,"address":"New York"} {% endcomment %}
+      <tr>
+         <th scope="row">1</th>
+         <td>{{person.name}}</td>
+         <td>{{person.age}}</td>
+         <td>{{person.address}}</td>
+      </tr>
+      
+      {% endfor %}
+
+   </tbody>
+   </table>
+   </div>
+{% endblock body %}
